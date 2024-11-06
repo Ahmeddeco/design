@@ -17,6 +17,9 @@ const config: Config = {
       gridTemplateColumns: {},
       fontFamily: {
         houseFont: ['var(--font-house)'],
+        bebas: ['var(--font-bebas)'],
+        manrope: ['var(--font-manrope)'],
+
       },
       inset: {},
       padding: {},
