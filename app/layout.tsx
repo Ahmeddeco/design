@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/Header'
-// import Footer from '@/components/Footer'
+import Footer from '@/components/Footer'
 
 const houseFont = localFont({
 	src: './fonts/HousttelySignature-GOonZ.ttf',
@@ -28,14 +28,13 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='en' data-theme='dark'>
 			<body
-				className={`${houseFont.variable} ${bebas.variable} ${manrope.variable} antialiased `}
-				data-barba='wrapper'
+				className={`${houseFont.variable} ${bebas.variable} ${manrope.variable} antialiased no-scrollbar text-neutral-content`}
 			>
 				<Header />
 				{children}
-				{/* <Footer /> */}
+				<Footer />
 			</body>
 		</html>
 	)

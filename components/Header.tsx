@@ -2,6 +2,8 @@
 import headerData from '@/data/header.json'
 import Link from 'next/link'
 import { useState } from 'react'
+import Btn from './Btn'
+
 const Header = () => {
 	const [showMenu, setShowMenu] = useState(false)
 
@@ -11,8 +13,8 @@ const Header = () => {
 	}
 	return (
 		<header className='fixed justify-between items-center px-6  z-10 w-full h-20'>
-			<div className=' flex justify-between h-full w-full items-center py-3 border-b-2 border-white'>
-				<Link href='/' className='font-bebas text-white text-xl'>
+			<div className=' flex justify-between h-full w-full items-center py-3 border-b-2 border-neutral-content'>
+				<Link href='/' className='font-bebas text-neutral-content text-xl'>
 					deco
 				</Link>
 
@@ -23,7 +25,10 @@ const Header = () => {
 				>
 					{headerData.header.map((item, index) => {
 						return (
-							<li className='text-white text-base uppercase' key={index}>
+							<li
+								className='text-neutral-content text-base uppercase'
+								key={index}
+							>
 								<Link href={item.href}>{item.label}</Link>
 							</li>
 						)
@@ -32,13 +37,11 @@ const Header = () => {
 				<div>
 					<button
 						onClick={() => toggleMenu()}
-						className='text-white sm:hidden z-20 relative'
+						className='text-neutral-content sm:hidden z-20 relative'
 					>
 						{showMenu ? 'Close' : 'Menu'}
 					</button>
-					<button className='sm:block font-bebas hidden border-2 border-white rounded-full px-3 py-1 text-white hover:bg-white hover:text-black duration-300'>
-						Contact Us
-					</button>
+					<Btn title={'contact us'} />
 				</div>
 			</div>
 		</header>

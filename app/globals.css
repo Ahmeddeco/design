@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-	font-family: 'Housettely';
-	src: url('/public/HousttelySignature-GOonZ.ttf');
-}
-
-/* Cursor component */
 .cursor {
 	position: fixed;
 	transform: translateX(-50%) translateY(-50%);
@@ -27,5 +21,13 @@
 	.no-scrollbar {
 		-ms-overflow-style: none; /* IE and Edge */
 		scrollbar-width: none; /* Firefox */
+	}
+}
+@layer base {
+	.h1 {
+		@apply font-bebas text-2xl xl:text-4xl text-white xl:max-w-xl max-w-md;
+	}
+	.p {
+		@apply font-manrope text-base text-pretty text-gray-200 xl:max-w-xl max-w-md;
 	}
 }
