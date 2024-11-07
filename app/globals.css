@@ -25,9 +25,9 @@
 }
 @layer base {
 	.h1 {
-		@apply font-bebas text-2xl xl:text-4xl text-white xl:max-w-xl max-w-md;
+		@apply font-bebas text-4xl text-base-content xl:max-w-xl max-w-md;
 	}
 	.p {
-		@apply font-manrope text-base text-pretty text-gray-200 xl:max-w-xl max-w-md;
+		@apply font-manrope text-base text-pretty text-neutral-300 xl:max-w-xl max-w-md;
 	}
 }

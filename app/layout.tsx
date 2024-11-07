@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 const houseFont = localFont({
 	src: './fonts/HousttelySignature-GOonZ.ttf',
@@ -30,7 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang='en' data-theme='dark'>
 			<body
-				className={`${houseFont.variable} ${bebas.variable} ${manrope.variable} antialiased no-scrollbar text-neutral-content`}
+				className={`${houseFont.variable} ${bebas.variable} ${manrope.variable} antialiased no-scrollbar `}
 			>
 				<Header />
 				{children}
